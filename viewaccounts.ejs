@@ -1,0 +1,36 @@
+<%- include('includes/header') %>
+
+    <div class="accounts">
+      
+      <ul  id="names">
+        <li class="names"><h3>Name</h3></li>
+          <% items.forEach(function(items) { %>
+            <li class="na">
+              <%= items.name %>
+            </li>
+          <% }); %>
+      </ul>
+      <ul id="mobileno">
+        <li class="mobileno"><h3>Mobile</h3></li>
+        <% items.forEach(function(items) { %>
+          <li class="mo">
+            <%= items.mobile %>
+          </li>
+        <% }); %>
+      </ul>
+      <ul id="accountbal">
+        <li class="accountbal"><h3>Account balance</h3></li>
+        <% items.forEach(function(items) { %>
+          <li class="acc">
+            <%= items.accountbalance %>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </body>
+  <script>
+      document.getElementById("va").style.display='none'
+  </script>
+</html>

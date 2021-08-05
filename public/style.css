@@ -1,0 +1,434 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+}
+.container h1 {
+  padding-left: 50px;
+}
+
+nav {
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  padding: 0px;
+  font-size: 14px;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 20px;
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 20px 20px 20px 0px;
+}
+
+ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0px;
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover::after {
+  width: 90%;
+}
+
+.image {
+  height: 100vh;
+  background-image: url("images/image-mockups.png"),
+    url("images/bg-intro-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  position: relative;
+  left: 320px;
+  bottom: 5px;
+}
+.content {
+  background-color: #f5f5f5;
+}
+.text {
+  position: absolute;
+  bottom: 360px;
+  left: 100px;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 1.8rem;
+}
+
+.text p {
+  font-size: 1rem;
+}
+
+.button {
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+  padding: 0.875rem 2.1875rem;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#31d35c),
+    to(#2bb7da)
+  );
+  background-image: linear-gradient(to right, #3ca558, #2bb7da);
+  border: 0;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.975rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  overflow: hidden;
+}
+.create {
+  position: relative;
+  top: 80px;
+  z-index: 1;
+  border: 2px #3ca558 solid;
+  max-width: 360px;
+  margin: 0 auto 80px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(131, 251, 255, 0.2),
+    0 5px 5px 0 rgba(113, 255, 243, 0.24);
+}
+
+.create input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.create button {
+  text-transform: uppercase;
+  outline: 0;
+  background-image: linear-gradient(to right, #3ca558, #2bb7da);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.create button:hover,
+.create button:active,
+.create button:focus {
+  background: #3ca558;
+}
+
+.accounts {
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  border: 2px #3ca558 solid;
+  margin: auto;
+}
+
+.na,
+.mo,
+.acc {
+  display: block;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.acc {
+  position: relative;
+  bottom: 10px;
+}
+
+.accountbal,
+.mobileno,
+.names {
+  padding-left: 10px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.accountbal {
+  white-space: normal;
+}
+
+.a {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    box-sizing: inherit;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .image {
+    z-index: -10;
+    background-image: url("images/image-mockups.png"),
+      url("images/bg-intro-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    position: relative;
+    left: 0px;
+    bottom: 150px;
+  }
+
+  .container h1 {
+    padding-left: 0px;
+  }
+
+  .content {
+    position: relative;
+    bottom: 200px;
+    background-color: white;
+  }
+
+  .text {
+    position: relative;
+    top: 0px;
+    left: 50px;
+    text-align: left;
+  }
+  .create {
+    z-index: 0;
+  }
+
+  .menu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.6s;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    top: 100px;
+  }
+  ul li {
+    width: 100%;
+    list-style: none;
+    display: block;
+  }
+
+  ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 20px 20px 0px;
+  }
+
+  ul li a:hover {
+    background-color: #f2f2f2;
+  }
+
+  ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-image: linear-gradient(to right, #31d35c, #2bb7da);
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 0.5s ease-in-out;
+  }
+
+  ul li a:hover::after {
+    width: 0px;
+  }
+
+  .boxone {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+  .boxtwo {
+    position: absolute;
+    right: 20px;
+    top: 43px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  .boxthree {
+    position: absolute;
+    right: 20px;
+    top: 51px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  .hamburger {
+    padding-left: 2px;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .accounts {
+    max-width: 400px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border: 2px #3ca558 solid;
+    margin: auto;
+  }
+  .accountbal,
+  .mobileno,
+  .names {
+    white-space: nowrap;
+    font-weight: 700;
+  }
+  .accountbal {
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .image {
+    height: 100vh;
+    background-image: url("images/image-mockups.png"),
+      url("images/bg-intro-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    position: relative;
+    left: 0px;
+    bottom: 75px;
+  }
+
+  .text {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .accounts {
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border: 2px #3ca558 solid;
+    margin: auto;
+    padding-right: 100px;
+  }
+
+  .na,
+  .mo,
+  .acc {
+    display: block;
+    font-size: 10px;
+    white-space: nowrap;
+    position: relative;
+    right: 20px;
+  }
+
+  .acc {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .accountbal,
+  .mobileno,
+  .names {
+    padding-left: 0px;
+    white-space: nowrap;
+    font-weight: 700;
+    padding-right: 0px;
+    position: relative;
+    right: 20px;
+  }
+
+  .accountbal {
+    white-space: normal;
+  }
+
+  .a {
+    display: none;
+  }
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .text {
+    position: relative;
+    top: -50px;
+    left: 0px;
+    text-align: left;
+  }
+}

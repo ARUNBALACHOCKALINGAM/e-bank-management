@@ -1,0 +1,16 @@
+<%- include('includes/header') %>
+
+    <div class="create">
+      <h1>Transfer money</h1>
+      <form action="/transfer" method="POST">
+       
+        <input type="text" name="to" id="to" placeholder="To" />
+        <input type="text" name="from" id="from" placeholder="From" />
+        <input type="text" name="amount" id="amt" placeholder="Amount" />
+
+        
+        <button class="create_btn">Transfer</button>
+      </form>
+    </div>
+  </body>
+</html>

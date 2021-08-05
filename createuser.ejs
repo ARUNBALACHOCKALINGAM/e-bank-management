@@ -1,0 +1,21 @@
+<%- include('includes/header') %>
+    <div class="create">
+      <h1>Create a user</h1>
+      <form action="/create-user" method="POST">
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <input type="text" name="mobile" id="mobile" placeholder="Mobile" />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="text"
+          name="accbal"
+          id="accbal"
+          placeholder="Account balance"
+        />
+        <button id="create">Create Account</button>
+      </form>
+    </div>
+  </body>
+  <script>
+     document.getElementById("cu").style.display='none'
+  </script>
+</html>
